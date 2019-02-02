@@ -7,11 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reach</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./dist/src/weather.js"></script>
+    <script type="text/javascript" src="https://cdn.aerisapi.com/js/aerismaps-visualizer.min.js"></script>
 </head>
 
 <body>
-
+    <div id='map'></div>
+    <script src="./dist/src/weather.js"></script>
+    <script src="./dist/src/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ4eMp5ARyXcSPiQPWPN5VlRPwvhjDIrQ&callback=initMap"
+        async defer></script>
 </body>
 
 </html>
