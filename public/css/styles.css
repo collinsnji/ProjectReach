@@ -1,0 +1,10 @@
+.map {
+  position: relative;
+  width: 500px;
+  overflow: hidden;
+  height: 500px;
+}
+.ia-map {
+  width: 500px;
+  height: 500px;
+}

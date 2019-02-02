@@ -7,14 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reach</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <script type="text/javascript" src="https://cdn.aerisapi.com/js/aerismaps-visualizer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.aerisapi.com/sdk/js/0.4.0/aerisweather.maps.css">
+    
+    
 </head>
 
 <body>
-    <div id='map'></div>
-    <script src="./dist/src/weather.js"></script>
+    <div id="map-target"></div>
+    <div id="ia-map" class="ia-map"></div>
+    <p id="map-toggle-anim">Play</p>
+    <script defer src="./lib/aerisweather.min.js"></script>
     <script src="./dist/src/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ4eMp5ARyXcSPiQPWPN5VlRPwvhjDIrQ&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ4eMp5ARyXcSPiQPWPN5VlRPwvhjDIrQ"
         async defer></script>
 </body>
 
