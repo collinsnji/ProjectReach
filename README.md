@@ -1,7 +1,7 @@
 # Welcome to ProjectReach!
 
   Our mission is to bring together weather data and charity location in order to help users find organizations in affected regions.
-## To visit our site: <ProjectReach.net>
+## To visit our site:[ProjectReach.net] (ProjectReach.net)
 
 ## Resources
   The following resources were used in our project:
