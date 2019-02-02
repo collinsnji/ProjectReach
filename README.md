@@ -1,4 +1,5 @@
-# Welcome to ProjectReach!
+# Welcome to ![ProjectReach](ReachTitleDARK.png)
+
 
   Our mission is to bring together weather data and charity location in order to help users find organizations in affected regions.
 
