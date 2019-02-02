@@ -6,6 +6,7 @@
 
 ## Resources
   The following resources were used in our project:
+
     - [Google Maps API](https://developers.google.com/maps/documentation/)
     - [Google Cloud Platform](https://cloud.google.com/)
     - [Domain.com](https://www.domain.com/)
