@@ -8,8 +8,6 @@
     <title>Reach</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdn.aerisapi.com/sdk/js/0.4.0/aerisweather.maps.css">
-    
-    
 </head>
 
 <body>
@@ -18,9 +16,98 @@
     <img src="https://legends.aerisapi.com/img/legend-temps-51a5ff86b4991e03b2984effd2d0c47e.svg">
     <p id="map-toggle-anim">Play</p>
     <script defer src="./lib/aerisweather.min.js"></script>
-    <script src="./dist/src/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ4eMp5ARyXcSPiQPWPN5VlRPwvhjDIrQ"
-        async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ4eMp5ARyXcSPiQPWPN5VlRPwvhjDIrQ"></script>
+    <script>
+        window.onload = () => {
+            const AccessKey = `bjGy3wInH5mquxYZoUYZB`;
+            const SecretKey = `SfYfmyTbb3lR5NyUNHdHjDNIsCfKkqWLPDPtml3r`;
+            const Weather = new AerisWeather(AccessKey, SecretKey);
+            const control = document.getElementById('map-toggle-anim');
+            if ('geolocation' in navigator) {
+                let position = {};
+                position.lat = 38.5816;
+                position.lon = -121.4944;
+                Weather.views().then((views) => {
+                    const map = new views.InteractiveMap('#ia-map', {
+                        strategy: 'google',
+                        center: {
+                            lat: position.lat,
+                            lon: position.lon
+                        },
+                        zoom: 6,
+                        layers: 'alerts,radar,earthquakes,stormcells',
+                        timeline: {
+                            from: -6 * 3600,
+                            to: 23 * 3600
+                        }
+                    }, (_Map_) => {
+                        // _Map_.addLayers(['water-depth', 'tropical-cyclones']);
+                        _Map_.addLayer('temperatures,water-flat:blend(dst-out)', {
+                            style: {
+                                opacity: 0.4,
+                                blur: 2
+                            }
+                        });
+                        _Map_.addLayer('stormreports', {
+                            style: {
+                                svg: {
+                                    shape: {
+                                        type: 'rect',
+                                        fill: {
+                                            color: '#7101df'
+                                        },
+                                        stroke: {
+                                            color: '#ffffff',
+                                            width: 2
+                                        }
+                                    }
+                                },
+                                size: [14, 14]
+                            }
+                        });
+                        _Map_.addLayer('stormcells', {
+                            request: {
+                                parameters: {
+                                    filter: 'tornado'
+                                }
+                            }
+                        });
+                    });
+                    map.on('load', () => {
+                        window.GoogleMap = map.strategy.map;
+                        console.log(window.GoogleMap);
+                        fetch('http://data.orghunter.com/v1/charitysearch?user_key=1426fc2d2e6b242fc2911ccbea6fce4b').then(results => results.json()).then(data => {
+                            data.data.forEach(charity => {
+                                let coords = {
+                                    lat: charity.latitude,
+                                    lon: charity.longitude
+                                };
+                                let latLng = new google.maps.LatLng(coords.lat, coords.lon);
+                                let marker = new google.maps.Marker({
+                                    position: latLng,
+                                    map: window.GoogleMap
+                                });
+
+                            });
+                        }).catch(err => {
+                            throw new Error(err);
+                        })
+                        map.on('timeline:play', () => {
+                            control.innerHTML = 'Stop';
+                        });
+                        map.on('timeline:stop', () => {
+                            control.innerHTML = 'Play';
+                        });
+                        control.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            map.timeline.toggle();
+                        });
+                    });
+
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>
