@@ -1,0 +1,29 @@
+{
+  "name": "ProjectReach",
+  "version": "1.0.0",
+  "description": "Help charities find the help they need in severe weather",
+  "main": "index.js",
+  "repository": "https://github.com/collinsnji/ProjectReach.git",
+  "author": [
+    "collinsnji <developer@collingrimm.me>",
+    "adeeb10abbas <aa4239@drexel.edu>",
+    "arschilke <arschilke@loyola.edu>",
+    "skiel14"
+  ],
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "clean": "rimraf coverage dist tmp",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
+}
