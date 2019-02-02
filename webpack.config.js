@@ -9,17 +9,16 @@ module.exports = {
         main: './src/main.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist/src'),
+        path: path.resolve(__dirname, 'public/dist/src'),
         filename: '[name].js'
     },
     node: {
-        fs: 'empty'
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
     },
     resolve: {
         extensions: ['.js', '.jsx']
     },
-    target: 'web',
-    externals: {
-        'request': 'request'
-    }
+    target: 'web'
 };
