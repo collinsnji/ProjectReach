@@ -11,6 +11,7 @@
   - [Google Cloud Platform](https://cloud.google.com/)
   - [Domain.com](https://www.domain.com/)
   - [AerisWeather](https://www.aerisweather.com/)
+  - [Charity GeoLocation API from OrgHunter](http://charityapi.orghunter.com/content/charity-geolocation-api)
 
 ### Who we are
   The Plastic Chickens were formed in February of 2019 at Georgetown University's HoyaHacks Hackathon.
