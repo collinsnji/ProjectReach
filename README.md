@@ -7,10 +7,10 @@
 ## Resources
   The following resources were used in our project:
 
-    - [Google Maps API](https://developers.google.com/maps/documentation/)
-    - [Google Cloud Platform](https://cloud.google.com/)
-    - [Domain.com](https://www.domain.com/)
-    - [AerisWeather](https://www.aerisweather.com/)
+  - [Google Maps API](https://developers.google.com/maps/documentation/)
+  - [Google Cloud Platform](https://cloud.google.com/)
+  - [Domain.com](https://www.domain.com/)
+  - [AerisWeather](https://www.aerisweather.com/)
 
 ### Who we are
   The Plastic Chickens were formed in February of 2019 at Georgetown University's HoyaHacks Hackathon.
