@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Project Reach</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-	<!-- Linking CSS -->
-	<link rel="stylesheet" type="text/css" href="pr_home.css">
-	<!-- Linking jQuery -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<!-- Linking Google Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail' rel='stylesheet' type='text/css'>
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <title>Project Reach</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <!-- Linking CSS -->
+  <link rel="stylesheet" type="text/css" href="pr_home.css">
+  <!-- Linking jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- Linking Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
+
 <body>
-    <div id="TOPwrapper">
-        <div class="jumbotron">
-			<img src="ReachTitleMed.png" alt="Project Reach" class="center img-fluid" onclick="location.href='index.html';">
-		</div>
-		<div id="buttons">
+  <div id="TOPwrapper">
+    <div class="jumbotron">
+      <img src="ReachTitleMed.png" alt="Project Reach" class="center img-fluid" onclick="location.href='index.html';">
+    </div>
+    <div id="buttons">
       <button class="btn btn-primary" onclick="location.href='index.html';">Home</button>
-			<button class="btn btn-primary" onclick="location.href='RSSWeather.html';">NOAA Storm Prediction Center</button>
-			<button class="btn btn-primary" onclick="location.href='RSSRelief.html';">Relief Web Disaster Reports</button>
-			<button class="btn btn-primary" onclick="location.reload()">Reload</button>
-			<div class="my-bitmoji-stickerpicker-icon-target" />
+      <button class="btn btn-primary" onclick="location.href='RSSWeather.html';">NOAA Storm Prediction Center</button>
+      <button class="btn btn-primary" onclick="location.href='RSSRelief.html';">Relief Web Disaster Reports</button>
+      <button class="btn btn-primary" onclick="location.reload()">Reload</button>
+      <div class="my-bitmoji-stickerpicker-icon-target" />
       <script>
-          window.snapKitInit = function () {
+        window.snapKitInit = function () {
           // Argument 1
           var bitmojiWebPickerIconClass =
             'my-bitmoji-stickerpicker-icon-target';
@@ -32,7 +35,7 @@
           // Argument 2
           var uiOptions = {
             onStickerPickCallback:
-              function onStickerPickCallback(bitmojiImgURL){
+              function onStickerPickCallback(bitmojiImgURL) {
                 console.log(bitmojiImgURL);
               },
             webpickerPosition: 'bottomRight',
@@ -65,21 +68,21 @@
           sjs.parentNode.insertBefore(js, sjs);
         }(document, 'script', 'bitmojikit-sdk'));
       </script>
-			<script type="text/javascript" src="https://sdk.snapkit.com/js/v1/login_bitmoji.js"></script>
-		</div>
-	</div>
+      <script type="text/javascript" src="https://sdk.snapkit.com/js/v1/login_bitmoji.js"></script>
+    </div>
+  </div>
 
-		<div class="container" id="main">
-			<div id="cont1">
-          <div id="rssincl-box-container-1206820"></div>
-          <script type="text/javascript">
-          (function() {
-          var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
-          s.src = 'http://output72.rssinclude.com/output?type=asyncjs&id=1206820&hash=d9ae8ce0e642fbac17338ddd33232adf';
+  <div class="container" id="main">
+    <div id="cont1">
+      <div id="rssincl-box-container-1206820"></div>
+      <script type="text/javascript">
+        window.load = (function () {
+          var s = document.createElement('script'); s.type = 'text/javascript';
+          s.src = '//output72.rssinclude.com/output?type=asyncjs&id=1206820&hash=d9ae8ce0e642fbac17338ddd33232adf';
           document.getElementsByTagName('head')[0].appendChild(s);
-          })();
-          </script>
-			</div>
-		</div>
-	</div>
+        })();
+      </script>
+    </div>
+  </div>
+  </div>
 </body>

@@ -106,10 +106,6 @@ window.onload = () => {
                 map.on('timeline:stop', () => {
                     control.innerHTML = 'Animate Weather Pattern';
                 });
-                control.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    map.timeline.toggle();
-                });
             });
 
         });
