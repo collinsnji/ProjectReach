@@ -5,6 +5,12 @@ body { /*affects body background and font properties*/
 
 .jumbotron {
 	background-color: #474350;
+	padding-bottom: 0%;
+	padding-top: 3%;
+}
+
+#buttons {
+	padding-bottom: 25px
 }
 
 #TOPwrapper {
@@ -15,16 +21,19 @@ body { /*affects body background and font properties*/
 
 #main {
 	background-color: white;
-	border: 3px solid black; /*white*/
 	text-align: center;
 	margin: 0 auto;
+	border-radius: 30px;
+}
+
+.btn {
+	background-color: #18A999;
+	border: 3px solid #109648;
 }
 
 #cont1 {
-	height="100%";
-	width="100%";
-	valign="middle";
-	align="center";
+	width: 100%;
+	vertical-align: middle;
 }
 
 img { 
@@ -36,24 +45,57 @@ img {
 	padding: 10px;
 }
 
-/*
-.jumbotron h1 {
-	color:white;
+/*RSS table style code*/
+.rssincl-title {
+	font-size: xx-large;
+	padding-top: 10px;
+	font-weight: bold;
+	text-align: left;
+	color: #109648;
 }
 
-p, h1, h4 {
-	font-family: 'Roboto Slab', serif;
+.rssincl-itemtitle {
+	text-align: left;
 }
 
-#funText {
-	color: black;
-	font-size: 24px;
-	font-family: 'Roboto Slab', serif;
+.rssincl-itemtitle > a{
+	color: #18A999;
+	text-align: left;
 }
 
-#box {
-	height: 100px;
-	width: 100px;
-	margin:auto;
+.rssincl-itemdesc {
+	text-align: left;
 }
-*/
+
+.rssincl-itemdesc > a{
+	text-align: left;
+	color: #18A999;
+}
+
+.rssincl-itemdate {
+	text-align: left;
+}
+
+.rssincl-itemdate > a{
+	text-align: left;
+	color: #18A999;
+}
+
+.rssincl-content {
+	text-align: left;
+}
+
+.rssincl-content > a{
+	color: #18A999;
+	text-align: left;
+}
+
+p > a{
+	color: #18A999;
+	text-align: left;
+}
+
+li > a{
+	color: #18A999;
+	text-align: left;
+}
