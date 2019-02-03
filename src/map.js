@@ -1,6 +1,6 @@
 window.onload = () => {
-    const AccessKey = `Jipdjc1LJCSlnDifLMl69`;
-    const SecretKey = `OcGDWSc1ycUNvnuHkXTDl95ue3TytGasLJWISMRg`;
+    const AccessKey = `PR4WiuLMV4BI3GXsX1O30`;
+    const SecretKey = `bhL724IGOp07NlZ10c8adLuoAViPkN0Uu5eAwmvp`;
     const CharityAPIKey = `1426fc2d2e6b242fc2911ccbea6fce4b`;
 
     const Weather = new AerisWeather(AccessKey, SecretKey);
@@ -80,7 +80,7 @@ window.onload = () => {
                             `
                             <p><b>${charity.charityName}</b></p>
                             <p>${missionStatement}</p>
-                            <a href='${charity.url} _target='blank'>${charity.url}</a><br/>
+                            <p><a href='${charity.url}' _target='blank'>${charity.url}</a></p>
                             <p><b><a href='${charity.donationUrl}' _target='blank'>Donate</a></b></p>
                             `;
                         let latLng = new google.maps.LatLng(coords.lat, coords.lon);
