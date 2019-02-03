@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdn.aerisapi.com/sdk/js/0.4.0/aerisweather.maps.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 </head>
 
 <body>
@@ -17,27 +21,80 @@
             <div class="cover-photo">
                 <div class="logo">
                     <div class="overlay">
-                        <img class='logo-img' onclick="location.reload()';" src="./assets/ReachTitle.png" alt="Project Reach Logo">
+                        <img class='logo-img' onclick="location.reload();" src="./assets/ReachTitle.png" alt="Project Reach Logo">
                         <h2 class="tag-line">Save Lives in Times of Crisis</h2>
                         <div id="buttons">
-                           <button class="btn btn-primary" onclick="location.href='../index.html';">Home</button>
-                           <button class="btn btn-primary" onclick="location.href='../RSSWeather.html';">NOAA Storm Prediction Center</button>
-                           <button class="btn btn-primary" onclick="location.href='../RSSRelief.html';">Relief Web Disaster Reports</button>
-                           <button class="btn btn-primary" onclick="location.reload()">Reload</button>
+                            <button class="primary-button" onclick="location.href='../index.html';">Home</button>
+                            <button class="primary-button" onclick="location.href='../RSSWeather.html';">NOAA Storm
+                                Prediction Center</button>
+                            <button class="primary-button" onclick="location.href='../RSSRelief.html';">Relief Web
+                                Disaster Reports</button>
+                            <button class="primary-button" onclick="location.reload()">Reload</button>
                         </div>
+                    </div>
                 </div>
-            </div>
         </figure>
         <figure class="section right">
             <div id="map-target"></div>
             <div id="ia-map" class="ia-map"></div>
             <img class="legend" src="https://legends.aerisapi.com/img/legend-temps-51a5ff86b4991e03b2984effd2d0c47e.svg">
-            <p id="map-toggle-anim">Play</p>
+            <div class="button-container-mid">
+                <button class="primary-button animation-button" id="map-toggle-anim">Animate Weather Pattern</button>
+                <button class="primary-button animation-button">Find A Charity</button>
+                <div class="charity-near-me" id="charity-near-me"></div>
+            </div>
         </figure>
     </section>
+    <div id="page-wrapper">
+        <section id="three" class="wrapper style3 special">
+            <div class="inner">
+                <header class="major">
+                    <h2>Charitable Giving Statistics</h2>
+                    <p>Americans gave $410 billion to charities in 2017, up 5%.</p>
+                </header>
+                <ul class="features">
+                    <li class="icon fa-paper-plane-o">
+                        <h3>Charity Statistics</h3>
+                        <p>31% of donors worldwide give to NGOs, NPOs & charities located outside of their country of
+                            residence.</p>
+                    </li>
+                    <li class="icon fa-laptop">
+                        <h3>Charitable Giving Demographics</h3>
+                        <p>40% of Millennial donors are enrolled in a monthly giving program</p>
+                    </li>
+                    <li class="icon fa-code">
+                        <h3>School Fundraising Statistics</h3>
+                        <p>56% of the country’s public schools have at least one donor appeal on its site</p>
+                    </li>
+                    <li class="icon fa-headphones">
+                        <h3>Volunteering Statistics & Trends</h3>
+                        <p>Approximately 63 million Americans — 25% of the adult population — volunteer their time,
+                            talents, and energy to making a difference.</p>
+                    </li>
+                    <li class="icon fa-heart-o">
+                        <h3>Corporate Giving Statistics</h3>
+                        <p>Corporate giving was bolstered by $405 million in contributions related to disaster relief.</p>
+                    </li>
+                    <li class="icon fa-flag-o">
+                        <h3>Online Giving For Churches</h3>
+                        <p>Giving to religion (defined as giving specifically to congregations, denominations,
+                            missionary societies, and religious media) has consistently remained America’s single
+                            largest recipient of charitable giving.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
     <script defer src="./lib/aerisweather.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ4eMp5ARyXcSPiQPWPN5VlRPwvhjDIrQ"></script>
     <script src="./dist/src/map.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

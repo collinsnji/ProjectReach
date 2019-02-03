@@ -16,8 +16,9 @@ html {
 .container {
   font-family: inherit;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  background: #fff;
 }
 .section {
   display: block;
@@ -29,6 +30,10 @@ html {
   display: flex;
 }
 .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .cover-photo {
   font-family: inherit;
@@ -48,7 +53,7 @@ html {
 }
 .overlay {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -61,4 +66,18 @@ html {
 .tag-line {
   color: #fff;
   font-family: sans-serif;
+}
+.primary-button {
+  /* padding: 8px; */
+  margin: 2px;
+  color: #404040;
+  background: white;
+  border: 3px solid #fff;
+  border-radius: 2px;
+}
+.animation-button {
+  border: 3px solid #404040;
+}
+.button-container-mid{
+  display: flex;
 }

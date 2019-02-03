@@ -1,6 +1,6 @@
 window.onload = () => {
-    const AccessKey = `5bkX9HAIz8xmGFVMPomJ4`;
-    const SecretKey = `KQs742rDMzi6qmOjxjOgtWW4jxe7aFs7atpjUxHf`;
+    const AccessKey = `Jipdjc1LJCSlnDifLMl69`;
+    const SecretKey = `OcGDWSc1ycUNvnuHkXTDl95ue3TytGasLJWISMRg`;
     const CharityAPIKey = `1426fc2d2e6b242fc2911ccbea6fce4b`;
 
     const Weather = new AerisWeather(AccessKey, SecretKey);
@@ -8,8 +8,8 @@ window.onload = () => {
 
     if ('geolocation' in navigator) {
         let position = {};
-        position.lat = 38.5816;
-        position.lon = -121.4944;
+        position.lat = 41.8781;
+        position.lon = -87.6298;
         Weather.views().then((views) => {
             const map = new views.InteractiveMap('#ia-map', {
                 strategy: 'google',
@@ -80,8 +80,8 @@ window.onload = () => {
                             `
                             <p><b>${charity.charityName}</b></p>
                             <p>${missionStatement}</p>
-                            <a href='${charity.url} _target='blank'>${charity.url}</a>
-                            <a href='${charity.donationUrl}' _target='blank'>Donate</a>
+                            <a href='${charity.url} _target='blank'>${charity.url}</a><br/>
+                            <p><b><a href='${charity.donationUrl}' _target='blank'>Donate</a></b></p>
                             `;
                         let latLng = new google.maps.LatLng(coords.lat, coords.lon);
                         let marker = new google.maps.Marker({
@@ -101,10 +101,10 @@ window.onload = () => {
                     throw new Error(err);
                 })
                 map.on('timeline:play', () => {
-                    control.innerHTML = 'Stop';
+                    control.innerHTML = 'Stop Animations';
                 });
                 map.on('timeline:stop', () => {
-                    control.innerHTML = 'Play';
+                    control.innerHTML = 'Animate Weather Pattern';
                 });
                 control.addEventListener('click', function (e) {
                     e.preventDefault();
