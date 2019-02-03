@@ -1,10 +1,11 @@
 window.onload = () => {
-    const AccessKey = `WWnmMI7I2xfx3wBNw1ewQ`;
-    const SecretKey = `KYZ4TdqH35oSoSuLDGUXN1ol2KZKox0yC5VqNdt7`;
+    const AccessKey = `5bkX9HAIz8xmGFVMPomJ4`;
+    const SecretKey = `KQs742rDMzi6qmOjxjOgtWW4jxe7aFs7atpjUxHf`;
     const CharityAPIKey = `1426fc2d2e6b242fc2911ccbea6fce4b`;
 
     const Weather = new AerisWeather(AccessKey, SecretKey);
     const control = document.getElementById('map-toggle-anim');
+
     if ('geolocation' in navigator) {
         let position = {};
         position.lat = 38.5816;
@@ -69,14 +70,18 @@ window.onload = () => {
                     }
                 }).then(results => results.json()).then(data => {
                     data.data.forEach(charity => {
+
                         let coords = {
                             lat: charity.latitude,
                             lon: charity.longitude
                         };
+                        let missionStatement = ((charity.missionStatement) ? charity.missionStatement : 'No mission statement provided');
                         let contentString =
                             `
                             <p><b>${charity.charityName}</b></p>
-                            <a href='${charity.url}'>Home Page</a>
+                            <p>${missionStatement}</p>
+                            <a href='${charity.url} _target='blank'>${charity.url}</a>
+                            <a href='${charity.donationUrl}' _target='blank'>Donate</a>
                             `;
                         let latLng = new google.maps.LatLng(coords.lat, coords.lon);
                         let marker = new google.maps.Marker({
