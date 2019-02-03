@@ -1,9 +1,6 @@
-if ('geolocation' in navigator) {
-
-}
 window.onload = () => {
-    const AccessKey = `QrTSamfllAQyzsdB8kLrl`;
-    const SecretKey = `ZpJks6qFwgDL1DKJ3Znj5aOADS2iSKec4z4Xza74`;
+    const AccessKey = `WWnmMI7I2xfx3wBNw1ewQ`;
+    const SecretKey = `KYZ4TdqH35oSoSuLDGUXN1ol2KZKox0yC5VqNdt7`;
     const CharityAPIKey = `1426fc2d2e6b242fc2911ccbea6fce4b`;
 
     const Weather = new AerisWeather(AccessKey, SecretKey);
@@ -61,7 +58,16 @@ window.onload = () => {
             map.on('load', () => {
                 window.GoogleMap = map.strategy.map;
                 console.log(window.GoogleMap);
-                fetch(`http://data.orghunter.com/v1/charitysearch?user_key=${CharityAPIKey}`).then(results => results.json()).then(data => {
+                fetch(`https://data.orghunter.com/v1/charitysearch?user_key=${CharityAPIKey}`, {
+                    mode: "cors", // no-cors, cors, *same-origin
+                    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: "same-origin", // include, *same-origin, omit
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Access-Control-Allow-Origin": "*"
+                        // "Content-Type": "application/x-www-form-urlencoded",
+                    }
+                }).then(results => results.json()).then(data => {
                     data.data.forEach(charity => {
                         let coords = {
                             lat: charity.latitude,

@@ -11,10 +11,24 @@
 </head>
 
 <body>
-    <div id="map-target"></div>
-    <div id="ia-map" class="ia-map"></div>
-    <img src="https://legends.aerisapi.com/img/legend-temps-51a5ff86b4991e03b2984effd2d0c47e.svg">
-    <p id="map-toggle-anim">Play</p>
+    <section class="container">
+        <figure class="section left">
+            <div class="cover-photo">
+                <div class="logo">
+                    <div class="overlay">
+                        <img class='logo-img' src="./assets/ReachTitle.png" alt="Project Reach Logo">
+                        <h2 class="tag-line">Save Lives in Times of Crisis</h2>
+                    </div>
+                </div>
+            </div>
+        </figure>
+        <figure class="section right">
+            <div id="map-target"></div>
+            <div id="ia-map" class="ia-map"></div>
+            <img class="legend" src="https://legends.aerisapi.com/img/legend-temps-51a5ff86b4991e03b2984effd2d0c47e.svg">
+            <p id="map-toggle-anim">Play</p>
+        </figure>
+    </section>
     <script defer src="./lib/aerisweather.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ4eMp5ARyXcSPiQPWPN5VlRPwvhjDIrQ"></script>
     <script src="./dist/src/map.js"></script>

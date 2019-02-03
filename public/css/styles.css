@@ -1,3 +1,8 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
 .map {
   position: relative;
   width: 100%;
@@ -7,4 +12,53 @@
 .ia-map {
   width: 100%;
   height: 90vh;
+}
+.container {
+  font-family: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+.left {
+  font-family: inherit;
+  display: flex;
+}
+.right {
+}
+.cover-photo {
+  font-family: inherit;
+  background: url("https://images.unsplash.com/photo-1543414993-6dbd67322ae3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-origin: content-box;
+  width: 100%;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+}
+.logo-img {
+  width: 500px;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.legend {
+  width: 100%;
+}
+.tag-line {
+  color: #fff;
+  font-family: sans-serif;
 }
