@@ -1,0 +1,59 @@
+body { /*affects body background and font properties*/
+	background-color: #474350;
+	text-align: center;
+}
+
+.jumbotron {
+	background-color: #474350;
+}
+
+#TOPwrapper {
+	margin: auto;
+	width: 100%;
+	min-width: 960px;
+}
+
+#main {
+	background-color: white;
+	border: 3px solid black; /*white*/
+	text-align: center;
+	margin: 0 auto;
+}
+
+#cont1 {
+	height="100%";
+	width="100%";
+	valign="middle";
+	align="center";
+}
+
+img { 
+	width: 800px;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+
+/*
+.jumbotron h1 {
+	color:white;
+}
+
+p, h1, h4 {
+	font-family: 'Roboto Slab', serif;
+}
+
+#funText {
+	color: black;
+	font-size: 24px;
+	font-family: 'Roboto Slab', serif;
+}
+
+#box {
+	height: 100px;
+	width: 100px;
+	margin:auto;
+}
+*/
