@@ -8,6 +8,7 @@
     <title>Reach</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdn.aerisapi.com/sdk/js/0.4.0/aerisweather.maps.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
 
 <body>
@@ -16,9 +17,14 @@
             <div class="cover-photo">
                 <div class="logo">
                     <div class="overlay">
-                        <img class='logo-img' src="./assets/ReachTitle.png" alt="Project Reach Logo">
+                        <img class='logo-img' onclick="location.reload()';" src="./assets/ReachTitle.png" alt="Project Reach Logo">
                         <h2 class="tag-line">Save Lives in Times of Crisis</h2>
-                    </div>
+                        <div id="buttons">
+                           <button class="btn btn-primary" onclick="location.href='../index.html';">Home</button>
+                           <button class="btn btn-primary" onclick="location.href='../RSSWeather.html';">NOAA Storm Prediction Center</button>
+                           <button class="btn btn-primary" onclick="location.href='../RSSRelief.html';">Relief Web Disaster Reports</button>
+                           <button class="btn btn-primary" onclick="location.reload()">Reload</button>
+                        </div>
                 </div>
             </div>
         </figure>
