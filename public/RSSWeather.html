@@ -10,23 +10,18 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<!-- Linking Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail' rel='stylesheet' type='text/css'>
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
     <div id="TOPwrapper">
         <div class="jumbotron">
-			<img src="ReachTitleMed.png" alt="Project Reach" class="center img-fluid">
+			<img src="ReachTitleMed.png" alt="Project Reach" class="center img-fluid" onclick="location.href='index.html';">
 		</div>
-		<div>
-			<button class="btn btn-primary" id="button1">NOAA Storm Prediction Center</button>
-			<button class="btn btn-primary" id="button1b">Relief Web Disaster Reports</button>
-			<button class="btn btn-primary" onclick="location.reload()">Reload</button>
-			<input class="btn btn-primary" type="button" onclick="location.href='http://google.com';" value="Go to Google" />
+		<div id="buttons">
+        <button class="btn btn-primary" onclick="location.href='index.html';">Home</button>
+        <button class="btn btn-primary" onclick="location.href='RSSWeather.html';">NOAA Storm Prediction Center</button>
+        <button class="btn btn-primary" onclick="location.href='RSSRelief.html';">Relief Web Disaster Reports</button>
+        <button class="btn btn-primary" onclick="location.reload()">Reload</button>
 			<div class="my-bitmoji-stickerpicker-icon-target" />
    <script>
       window.snapKitInit = function () {
@@ -74,16 +69,16 @@
 		</div>
 	</div>
 
-		<div class="container">
+		<div class="container" id="main">
 			<div id="cont1">
-				<div class= "col" id="rssincl-box-container-1206788"></div>
-				<script type="text/javascript">
-					(function() {
-					var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
-					s.src = 'http://output12.rssinclude.com/output?type=asyncjs&id=1206788&hash=e88cbd90e42aa77d4acbc275c1eec7dd';
-					document.getElementsByTagName('head')[0].appendChild(s);
-					})();
-				</script>
+          <div id="rssincl-box-container-1206787"></div>
+          <script type="text/javascript">
+          (function() {
+           var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+           s.src = 'http://output97.rssinclude.com/output?type=asyncjs&id=1206787&hash=26965867ed59c151303614e8c28a278b';
+           document.getElementsByTagName('head')[0].appendChild(s);
+          })();
+          </script>
 			</div>
 		</div>
 	</div>
