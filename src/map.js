@@ -1,6 +1,6 @@
 window.onload = () => {
-    const AccessKey = `PR4WiuLMV4BI3GXsX1O30`;
-    const SecretKey = `bhL724IGOp07NlZ10c8adLuoAViPkN0Uu5eAwmvp`;
+    const AccessKey = `0JmO6O5gAPFOTTvqvaiUj`;
+    const SecretKey = `pQqbMFQqxG0vJZKYUcutlOFmVviSwfN7BRNvcQeP`;
     const CharityAPIKey = `1426fc2d2e6b242fc2911ccbea6fce4b`;
 
     const Weather = new AerisWeather(AccessKey, SecretKey);
